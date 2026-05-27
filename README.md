@@ -47,3 +47,63 @@ GridSearchCV с 5‑кратной кросс-валидацией, оптими
 Лучшие параметры для Random Forest:
 ```python
 {'max_depth': 10, 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 300}
+```
+Результаты на тестовой выборке
+Модель | Accuracy	| Precision |	Recall | F1-score |	ROC-AUC
+Logistic Regression	0.811	0.666	0.580	0.620	0.855
+Decision Tree	0.727	0.487	0.532	0.508	0.668
+Random Forest	0.787	0.624	0.497	0.554	0.834
+Gradient Boosting	0.814	0.687	0.551	0.611	0.854
+Лучшая модель: Gradient Boosting (ROC‑AUC 0.854).
+Random Forest после настройки дал ROC‑AUC 0.853.
+
+📈 Интерпретация (Feature Importance)
+Топ-5 важнейших признаков (Random Forest):
+
+Charges Ratio (14.4%) – созданный признак интенсивности трат.
+
+Contract (13.9%) – тип контракта (помесячный → высокий риск).
+
+Monthly Charges (10.9%) – чем выше платёж, тем выше риск.
+
+Tenure Months (10.8%) – давние клиенты лояльны.
+
+Total Charges (8.7%) – чем больше потратил, тем меньше риск.
+
+Статистические гипотезы:
+
+Зависимость оттока от типа контракта: χ² = 1184.6, p ≈ 0.0 (значимо).
+
+Зависимость оттока от наличия техподдержки: χ² = 828.2, p ≈ 0.0 (значимо).
+
+🏗️ Архитектура (Pipeline)
+text
+Загрузка данных → Предобработка → Feature Engineering → Split (80/20) 
+→ Обучение моделей → GridSearchCV → Оценка → Сохранение модели (.pkl)
+🚀 Запуск проекта
+Клонировать репозиторий:
+
+bash
+git clone https://github.com/your-username/churn-prediction.git
+cd churn-prediction
+Установить зависимости:
+
+bash
+pip install -r requirements.txt
+Запустить Jupyter Notebook:
+
+bash
+jupyter notebook "Проектное задание_ML.ipynb"
+requirements.txt (основные пакеты):
+
+text
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+scipy
+statsmodels
+plotly
+kagglehub
+joblib
