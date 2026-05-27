@@ -49,12 +49,13 @@ GridSearchCV с 5‑кратной кросс-валидацией, оптими
 {'max_depth': 10, 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 300}
 ```
 Результаты на тестовой выборке \
-Модель | Accuracy	| Precision |	Recall | F1-score |	ROC-AUC
-Logistic Regression	0.811	0.666	0.580	0.620	0.855
-Decision Tree	0.727	0.487	0.532	0.508	0.668
-Random Forest	0.787	0.624	0.497	0.554	0.834
-Gradient Boosting	0.814	0.687	0.551	0.611	0.854
-Лучшая модель: Gradient Boosting (ROC‑AUC 0.854).
+Модель | Accuracy	| Precision |	Recall | F1-score |	ROC-AUC \
+Logistic Regression	0.811	0.666	0.580	0.620	0.855 \
+Decision Tree	0.727	0.487	0.532	0.508	0.668 \
+Random Forest	0.787	0.624	0.497	0.554	0.834 \
+Gradient Boosting	0.814	0.687	0.551	0.611	0.854 \
+
+Лучшая модель: Gradient Boosting (ROC‑AUC 0.854). 
 Random Forest после настройки дал ROC‑AUC 0.853.
 
 📈 Интерпретация (Feature Importance)
