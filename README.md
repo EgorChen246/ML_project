@@ -48,7 +48,7 @@ GridSearchCV с 5‑кратной кросс-валидацией, оптими
 ```python
 {'max_depth': 10, 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 300}
 ```
-Результаты на тестовой выборке /
+Результаты на тестовой выборке \
 Модель | Accuracy	| Precision |	Recall | F1-score |	ROC-AUC
 Logistic Regression	0.811	0.666	0.580	0.620	0.855
 Decision Tree	0.727	0.487	0.532	0.508	0.668
