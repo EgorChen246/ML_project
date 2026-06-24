@@ -83,10 +83,10 @@ Random Forest после настройки гиперпараметров да�
 
 ## 🚀 Запуск проекта
 
-1. Клонировать репозиторий:
+1. Клонировать репозиторий: 
 ```bash
-git clone https://github.com/your-username/churn-prediction.git
-cd churn-prediction
+git clone https://github.com/EgorChen246/ML_project.git
+cd ML_project
 ```
 
 2. Установить зависимости:
